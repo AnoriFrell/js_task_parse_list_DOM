@@ -4,11 +4,11 @@
 
 const list = document.querySelector('ul');
 
-const sortedItems = Array.from(list.children).sort((item1, item2) => {
+const sortedList = Array.from(list.children).sort((item1, item2) => {
   return (
     Number(item2.dataset.salary.replaceAll('$', '').replaceAll(',', '')) -
     Number(item1.dataset.salary.replaceAll('$', '').replaceAll(',', ''))
   );
 });
 
-sortedItems.forEach((item) => list.appendChild(item));
+sortedList.forEach((item) => list.appendChild(item));
